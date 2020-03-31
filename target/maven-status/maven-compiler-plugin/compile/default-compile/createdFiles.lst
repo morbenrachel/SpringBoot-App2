@@ -1,6 +1,10 @@
 org\app2\UserDataAPI.class
 org\app2\User.class
+org\app2\DataBaseService.class
 org\app2\MainApp2Class.class
 org\app2\UserDataService.class
+org\app2\UserDataServiceConfiguration.class
 org\app2\UserDataRepository.class
+org\app2\DataBaseAPI.class
+org\app2\App2Controller.class
 org\app2\MainApp2Class$1.class

@@ -20,7 +20,7 @@ public class MainApp2Class {
     }
 
     @Bean
-    CommandLineRunner runner(UserDataService userService) {
+    CommandLineRunner runner(DataBaseService dbService) {
         return args -> {
             // read json and write to db
             ObjectMapper mapper = new ObjectMapper();
@@ -28,7 +28,7 @@ public class MainApp2Class {
             InputStream inputStream = TypeReference.class.getResourceAsStream("/users.json");
             try {
                 List<User> users = mapper.readValue(inputStream,typeReference);
-                userService.save(users);
+                dbService.saveListOfUsers(users);
                 System.out.println("Users Saved!");
             } catch (IOException e){
                 System.out.println("Unable to save users: " + e.getMessage());

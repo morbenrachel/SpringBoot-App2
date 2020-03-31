@@ -1,11 +1,10 @@
 package org.app2;
 
+import java.io.IOException;
 import java.util.List;
-import java.util.UUID;
 
 public interface UserDataAPI {
-    User getUserDetailsByUserId(UUID userId);
-    List<String> getAllUserNames(boolean sorted);
-    UUID addUser(String name, String surname, int birthYear);
-    void save(List<User> users);
+    User getUserDetailsById(String userId) throws IOException;
+    List<User> getAllUserNames(boolean sorted) throws IOException;
+    String addUser(String name, String surname, int birthYear);
 }

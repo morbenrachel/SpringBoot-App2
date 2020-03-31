@@ -45,10 +45,11 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <version>1.4.1.RELEASE</version>
                 <executions>
                     <execution>
-                        <id>repackage</id>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
                         <configuration>
                             <classifier>exec</classifier>
                         </configuration>
